@@ -1,7 +1,17 @@
 import './App.css';
-
+import { User } from './User.js'
 function App() {
-  const names = ["Pedro", "Jake", "Jessica", "Sarah"];
+  const users = [
+    {
+      name: "Pedro", age: 21
+    },
+    {
+      name: "Jessica", age: 20
+    },
+    {
+      name: "Jake", age: 22
+    }
+  ]
 
   return (
     <div className="App">
@@ -9,8 +19,8 @@ function App() {
       <Job salary={12000} position="Junior SDE" company="Google" />
       <Job salary={10000} position="Project Manager" company="Netflix" />
 
-      {names.map((value, key) => {
-        return <h1 key={key}>Hello {value}</h1>
+      {users.map((user, key) => {
+        return <User name={user.name} age={user.age}/>
       })}
     </div>
   );
