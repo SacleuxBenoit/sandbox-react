@@ -1,36 +1,31 @@
 import './App.css';
-import { User } from './User.js'
+
 function App() {
-  const users = [
-    {
-      name: "Pedro", age: 21
-    },
-    {
-      name: "Jessica", age: 20
-    },
-    {
-      name: "Jake", age: 22
-    }
-  ]
+  const planets = [
+    {name: "Mars", isGasPlanet: false},
+    {name: "Earth", isGasPlanet: false},
+    {name: "Jupiter", isGasPlanet: true},
+    {name: "Venus", isGasPlanet: false},
+    {name: "Neptune", isGasPlanet: true},
+    {name: "Uranues", isGasPlanet: true},
+];
 
   return (
     <div className="App">
-      <Job salary={90000} position="Senior SDE" company="Amazon" />
-      <Job salary={12000} position="Junior SDE" company="Google" />
-      <Job salary={10000} position="Project Manager" company="Netflix" />
-
-      {users.map((user, key) => {
-        return <User name={user.name} age={user.age}/>
+      {planets.map((planet,key) => {
+        if(planet.isGasPlanet){
+          return <h1>{planet.name}</h1>
+        }
       })}
     </div>
   );
 }
 
-const Job = (props) => {
-  return(
-    <div>
-    <p>The company is {props.company} your position will be {props.position} and the salary is {props.salary} dollars </p>
-  </div>
-  );
-};
+// const Job = (props) => {
+//   return(
+//     <div>
+//     <p>The company is {props.company} your position will be {props.position} and the salary is {props.salary} dollars </p>
+//   </div>
+//   );
+// };
 export default App;
