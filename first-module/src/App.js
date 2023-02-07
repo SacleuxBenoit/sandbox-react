@@ -1,22 +1,20 @@
 import './App.css';
-
 function App() {
-  const planets = [
-    {name: "Mars", isGasPlanet: false},
-    {name: "Earth", isGasPlanet: false},
-    {name: "Jupiter", isGasPlanet: true},
-    {name: "Venus", isGasPlanet: false},
-    {name: "Neptune", isGasPlanet: true},
-    {name: "Uranues", isGasPlanet: true},
-];
+  let number = 0;
 
+  let increaseNumber = (num) => {
+    number = number += 1;
+    console.log(number)      
+}
   return (
     <div className="App">
-      {planets.map((planet,key) => {
+      {number}
+      <button onClick={increaseNumber}>Click to increase</button>
+      {/* {planets.map((planet,key) => {
         if(planet.isGasPlanet){
           return <h1>{planet.name}</h1>
         }
-      })}
+      })} */}
     </div>
   );
 }
