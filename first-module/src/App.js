@@ -1,10 +1,11 @@
 import './App.css';
-function App() {
-  let number = 0;
+import { useState } from 'react';
 
-  let increaseNumber = (num) => {
-    number = number += 1;
-    console.log(number)      
+function App() {
+  let [number, setNumber] = useState(0)
+
+  let increaseNumber = () => {
+    setNumber(number + 1)
 }
   return (
     <div className="App">
