@@ -3,15 +3,26 @@ import { useState } from 'react';
 
 function App() {
 
-  let [displayTitle, setDisplayTitle] = useState(true);
+  let [count, setCount] = useState(0);
 
-  let changeDisplayTitle = () => {
-    setDisplayTitle(!displayTitle);
+  let increaseCount = () => {
+    setCount(count + 1);
   }
+
+  let decreaseCount = () => {
+    setCount(count - 1);
+  }
+
+  let reset = () => {
+    setCount(0)
+  }
+
   return (
     <div className="App">
-      <button onClick={changeDisplayTitle}>Show / hide</button>
-      {displayTitle && <h1>Hello World</h1>}
+      <button onClick={increaseCount}>Increase</button>
+      <button onClick={decreaseCount}>Decrease</button>
+      <button onClick={reset}>Reset</button>
+      {count}
     </div>
   );
 }
