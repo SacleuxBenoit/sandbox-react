@@ -14,6 +14,19 @@ function App() {
     setTodolist(newTodolist);
     // setTodolist([...todoList, newTask]); Work same way as above
   }
+
+  let deleteTask = (taskName) => {
+    let newTodolist = todoList.filter((task) => {
+      if(task === taskName){
+        return false;
+      }else{
+        return true;
+      }
+    });
+
+    setTodolist(newTodolist);
+  }
+
   return (
     <div className="App">
       <div className="addTask">
@@ -24,7 +37,10 @@ function App() {
       <div className="list">
         {todoList.map((task) => {
           return(
-            <h1>{task}</h1>
+            <div>
+              <h1>{task}</h1>
+              <button onClick={() => deleteTask(task)}>x</button>
+            </div>
           )
         })}
       </div>
