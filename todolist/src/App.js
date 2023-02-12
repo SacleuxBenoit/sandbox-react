@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react' 
+import { Task } from './Task'
 
 function App() {
   let [todoList, setTodolist] = useState([]);
@@ -34,10 +35,10 @@ function App() {
       <div className="list">
         {todoList.map((task) => {
           return(
-            <div>
-              <h1>{task.taskName}</h1>
-              <button onClick={() => deleteTask(task.id)}>x</button>
-            </div>
+            <Task 
+              taskName={task.taskName}
+              id={task.id}
+              deleteTask={deleteTask}/>
           )
         })}
       </div>
