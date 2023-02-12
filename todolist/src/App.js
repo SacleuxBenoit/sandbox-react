@@ -16,15 +16,7 @@ function App() {
   }
 
   let deleteTask = (taskName) => {
-    let newTodolist = todoList.filter((task) => {
-      if(task === taskName){
-        return false;
-      }else{
-        return true;
-      }
-    });
-
-    setTodolist(newTodolist);
+    setTodolist(todoList.filter((task) => task !== taskName));
   }
 
   return (
