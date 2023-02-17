@@ -1,3 +1,3 @@
-export let Menu = () => {
-    return <h1>This is the menu page</h1>
+export let Menu = (props) => {
+    return <h1>Hello {props.username} you are in the Menu page</h1>
 }

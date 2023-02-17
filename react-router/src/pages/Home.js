@@ -1,3 +1,3 @@
-export let Home = () => {
-    return <h1>This is the home page</h1>
+export let Home = (props) => {
+    return <h1>Hello {props.username} you are in the Home page</h1>
 }
