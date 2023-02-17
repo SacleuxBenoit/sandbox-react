@@ -5,22 +5,26 @@ import { Profile } from './pages/Profile'
 import { Menu } from './pages/Menu'
 import { Contact } from './pages/Contact'
 import { NavBar } from './pages/NavBar'
-import { useState } from 'react'
+import { useState, createContext } from 'react'
+
+export let AppContext = createContext();
 function App() {
   let [username, setUsername] = useState("Benoît");
 
   return (
     <div className="App">
-      <Router>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home username={username}/>}/>
-          <Route path="/profile" element={<Profile username={username} />} />
-          <Route path="/menu" element={<Menu username={username}/>}/>
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </Router>
+      <AppContext.Provider value={{username, setUsername}}>   
+        <Router>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home username={username}/>}/>
+            <Route path="/profile" element={<Profile/>} />
+            <Route path="/menu" element={<Menu/>}/>
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </Router>
+      </AppContext.Provider>
     </div>
   );
 }
