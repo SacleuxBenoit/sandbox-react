@@ -10,7 +10,7 @@ export default function PlanetComponent(){
 
     return(
         planets.map((planet,key) => {
-            if(planet.isGasPlanet) return <div>{planet.name}</div>
+            if(planet.isGasPlanet) return <div key={key}>{planet.name}</div>
         })
     )
 }

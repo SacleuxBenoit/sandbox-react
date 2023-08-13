@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Planet from './pages/planet';
+import IncrementButton from './pages/IncrementButton';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/planet" element={<Planet />} />
+          <Route path="incrementButton" element={<IncrementButton />} />
         </Routes>
       </BrowserRouter>
     </div>
