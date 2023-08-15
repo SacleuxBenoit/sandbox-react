@@ -1,5 +1,9 @@
+ import NavBar from "../components/NavBar"
+
 export default function HideShow(){
-    <>
-        HideShow page
-    </>
+    return(
+        <>
+            <NavBar />
+        </>
+    ) 
 }
