@@ -6,6 +6,7 @@ export default function NavBar(){
         <NavLink to="/planet"> Planet</NavLink> |
         <NavLink to="/incrementButton"> Increment Button</NavLink> |
         <NavLink to="/hideShow"> Hide /Show</NavLink>
+        <NavLink to="/count">Count</NavLink>
         </>
     )
 }

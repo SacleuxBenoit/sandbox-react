@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound';
 import Planet from './pages/planet';
 import IncrementButton from './pages/IncrementButton';
 import HideShow from './pages/HideShow';
+import Count from './pages/Count';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/planet" element={<Planet />} />
           <Route path="/incrementButton" element={<IncrementButton />} />
           <Route path="/hideShow" element={<HideShow />} />
+          <Route path="/count" element={<Count />} />
         </Routes>
       </BrowserRouter>
     </div>
