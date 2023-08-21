@@ -6,6 +6,7 @@ import Planet from './pages/planet';
 import IncrementButton from './pages/IncrementButton';
 import HideShow from './pages/HideShow';
 import Count from './pages/Count';
+import Todolist from './pages/Todolist';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/incrementButton" element={<IncrementButton />} />
           <Route path="/hideShow" element={<HideShow />} />
           <Route path="/count" element={<Count />} />
+          <Route path="/todolist" element={<Todolist />} />
         </Routes>
       </BrowserRouter>
     </div>
