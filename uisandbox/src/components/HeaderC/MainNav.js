@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import '../../styles/Header.css'
+import '../../styles/HeaderC/Header.css'
+import LeftNavBar from "../LeftNavBar"
 
 function MainNav() {
     const [navLeft, setNavLeft] = useState(false)
@@ -19,33 +20,7 @@ function MainNav() {
             <Link to="/">Livre</Link>
             <Link to="/">Informatique</Link>
             <Link to="/">Audio</Link>
-            {navLeft && (
-                <div className="containerNavLeft">
-                    <div>Bonjour, identifiez-vous</div>
-                    <div>
-                        <ul>
-                            <li className="menuTitle">Tendances</li>
-                            <li>Meilleurs ventes</li>
-                            <li>Dernières Nouveautés</li>
-                            <li>Baromètre des ventes</li>
-
-                            <li className="menuSeparator"></li>
-
-                            <li className="menuTitle">Choisir une catégorie</li>
-                            <li>Livres</li>
-                            <li>Musique, DvD</li>
-                            <li>Jeux Vidéo et console</li>
-                            <li>High-tech</li>
-
-                            <li className="menuSeparator"></li>
-                            <li>Programmes et services</li>
-                            <li>Launchpad</li>
-                            <li>Fabriqué en France</li>
-                            <li>Essayez avant d'acheter</li>
-                        </ul>
-                    </div>
-                </div>
-            )}
+            {navLeft && <LeftNavBar />}
         </>
     )
 }
