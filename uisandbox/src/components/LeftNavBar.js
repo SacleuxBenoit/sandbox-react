@@ -1,39 +1,40 @@
 import '../styles/LeftNavBar.css'
+import { Link } from 'react-router-dom'
 
 function LeftNavBar() {
     return (
         <div className="containerNavLeft">
-            <div className='identification'>Bonjour, identifiez-vous</div>
+            <Link to="/"><div className='identification'>Bonjour, identifiez-vous</div></Link>
             <div>
                 <ul>
                     <li className="menuTitle">Tendances</li>
-                    <li>Meilleurs ventes</li>
-                    <li>Dernières Nouveautés</li>
-                    <li>Baromètre des ventes</li>
+                    <Link to="/"><li>Meilleurs ventes</li></Link>
+                    <Link to="/"><li>Dernières Nouveautés</li></Link>
+                    <Link to="/"><li>Baromètre des ventes</li></Link>
 
                     <li className="menuSeparator"></li>
 
                     <li className="menuTitle">Contenu Numérique et Appareils</li>
-                    <li>Vidéo</li>
-                    <li>Musique</li>
-                    <li>Maison connectée</li>
-                    <li>Kindle & ebooks</li>
-                    <li>Livre audio</li>
+                    <Link to="/"><li>Vidéo</li></Link>
+                    <Link to="/"><li>Musique</li></Link>
+                    <Link to="/"><li>Maison connectée</li></Link>
+                    <Link to="/"><li>Kindle & ebooks</li></Link>
+                    <Link to="/"><li>Livre audio</li></Link>
 
                     <li className="menuSeparator"></li>
 
                     <li className="menuTitle">Choisir une catégorie</li>
-                    <li>Livres</li>
-                    <li>Musique, DvD</li>
-                    <li>Jeux Vidéo et console</li>
-                    <li>High-tech</li>
+                    <Link to="/"><li>Livres</li></Link>
+                    <Link to="/"><li>Musique, DvD</li></Link>
+                    <Link to="/"><li>Jeux Vidéo et console</li></Link>
+                    <Link to="/"><li>High-tech</li></Link>
 
                     <li className="menuSeparator"></li>
 
                     <li className='menuTitle'>Programmes et services</li>
-                    <li>Launchpad</li>
-                    <li>Fabriqué en France</li>
-                    <li>Essayez avant d'acheter</li>
+                    <Link to="/"><li>Launchpad</li></Link>
+                    <Link to="/"><li>Fabriqué en France</li></Link>
+                    <Link to="/"><li>Essayez avant d'acheter</li></Link>
                 </ul>
             </div>
         </div>

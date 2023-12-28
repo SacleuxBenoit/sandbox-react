@@ -12,6 +12,11 @@
     overflow-x: hidden;
 }
 
+.containerNavLeft a {
+    margin: 0;
+    padding: 0;
+}
+
 .identification {
     background-color: rgb(59, 89, 152);
     color: white;
