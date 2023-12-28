@@ -6,13 +6,9 @@ import LeftNavBar from "../LeftNavBar"
 function MainNav() {
     const [navLeft, setNavLeft] = useState(false)
 
-    function toggleLeftNav() {
-        setNavLeft(!navLeft)
-    }
-
     return (
         <>
-            <button onClick={toggleLeftNav}>Tous</button>
+            <button onClick={() => { setNavLeft(!navLeft) }}>Tous</button>
             <Link to="/">Carte cadeaux</Link>
             <Link to="/">Nos meilleurs ventes</Link>
             <Link to="/">Vente flash</Link>
@@ -20,7 +16,7 @@ function MainNav() {
             <Link to="/">Livre</Link>
             <Link to="/">Informatique</Link>
             <Link to="/">Audio</Link>
-            {navLeft && <LeftNavBar />}
+            {navLeft && <LeftNavBar closeNavLeft={() => { setNavLeft(false) }} />}
         </>
     )
 }
