@@ -1,14 +1,43 @@
 .containerNavLeft {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
     font-size: 1.2rem;
-    padding: .4rem;
+    width: 25%;
+    border: 1px solid black;
+    z-index: 1000;
+    background-color: #f0f0f0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.identification {
+    background-color: rgb(59, 89, 152);
+    color: white;
+    text-align: center;
+    padding: 11px 0;
 }
 
 .containerNavLeft,
 ul,
 li {
-    padding-bottom: .3rem;
+    padding: 0;
+}
+
+li:not(.menuSeparator) {
+    padding: 10px 0;
+    padding-left: 2rem;
+}
+
+li:not(.menuTitle, .menuSeparator):hover {
+    background-color: rgba(170, 170, 170, 0.292);
 }
 
 .menuTitle {
     font-size: 1.6rem;
+}
+
+.menuSeparator {
+    border-bottom: 1px solid black;
 }
